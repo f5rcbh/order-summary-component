@@ -1,0 +1,178 @@
+* , *::after , *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Roots */
+
+:root{
+    /* Primary */
+    --paleBlue-clr:hsla(225, 100%, 94%, 0.521);
+    --brightBlue-clr:hsl(245, 75%, 52%);
+    /* Netural */
+    --veryPaleBlue-clr:hsl(225, 100%, 98%);
+    --destBlue-clr:hsl(224, 23%, 55%);
+    --darkBlue-clr:hsl(223, 47%, 23%);
+    /* Size */
+    --font-size:16px;
+    /* Fonts */
+    --family:'Red Hat Display', sans-serif;;
+    --weight-5:500;
+    --weight-7:700;
+    --weight-9:900;
+}
+
+/* Desktop Version */
+/* Start styling */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--paleBlue-clr);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    font-family: var(--family);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.card{
+    background-color: var(--veryPaleBlue-clr);
+    box-shadow: 1px 1px 10px var(--destBlue-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+}   
+
+.music{
+    width: 90%;
+    padding: 10px 20px ;
+    margin: 10px 0;  
+    display: inline-flex;
+    background-color: var(--paleBlue-clr);
+    border-radius: 20px;
+    line-height: 1.5;
+}
+.music-img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.content h1{
+    font-weight: var(--weight-9);
+    margin: 10px ;
+}
+.content p{
+    font-weight: var(--weight-5);
+    margin: 5px 0;
+    color: var(--destBlue-clr);
+}
+.music div{
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px 0 10px;
+}
+.music div span:nth-child(1){
+    font-weight: var(--weight-7);
+}
+.music div span:nth-child(2){
+    color: var(--destBlue-clr);
+}
+.music a {
+    color: var(--brightBlue-clr);
+    font-weight: var(--weight-9);
+    margin: auto;
+    font-size: 12px;
+}
+.music a:active{
+    color: hsla(245, 75%, 52%, 0.685);
+    text-decoration: none;
+}
+.btn{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+.btn button{
+    margin: 10px;
+}
+
+.proceed{
+    
+    background-color: var(--brightBlue-clr);
+    color: #fff;
+    width: 85%;
+    font-size: var(--font-size);
+    box-shadow: 0px 4px 8px 2px var(--destBlue-clr);
+    
+    padding: 10px;
+    border-radius: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    font-weight: var(--weight-7);
+}
+.proceed:hover,
+.cancel:hover{
+    cursor: pointer;
+}
+.proceed:active{
+    background-color: hsla(245, 75%, 52%, 0.685);
+}
+.cancel{
+    color: var(--destBlue-clr);
+    font-weight: var(--weight-9);
+}
+.cancel:active{
+    color: var(--darkBlue-clr);
+}
+
+
+/* Phone version */
+
+@media screen and (max-width:600px) {
+    
+
+    .content h1{
+        font-size: 15px;
+    }
+    .content p {
+        font-size: 10px;
+        
+    }
+    .music{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+    .music div {
+        margin: auto;
+        padding: 0;
+    }
+   
+    .btn .proceed , .btn .cancel{
+        font-size: 10px;
+        width: 100%;
+    }
+}
